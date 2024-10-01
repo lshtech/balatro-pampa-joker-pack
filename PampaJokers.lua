@@ -1,7 +1,7 @@
 --- STEAMODDED HEADER
 --- MOD_NAME: Pampa Joker Pack
---- MOD_ID: mtl_jkr
---- MOD_AUTHOR: [Matelote]
+--- MOD_ID: mtl_jkr2
+--- MOD_AUTHOR: [Matelote, elbe]
 --- MOD_DESCRIPTION: Adds 28 Jokers in the game
 
 
@@ -1763,6 +1763,12 @@ function Card.calculate_joker(self, context)
     end
 
     return calc_ref
+end
+
+local mod_path = SMODS.current_mod.path
+-- JokerDisplay mod support
+if _G["JokerDisplay"] then
+	NFS.load(mod_path .. "PampaJokers_Definitions.lua")()
 end
 
 ----------------------------------------------
