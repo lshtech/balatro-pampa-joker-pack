@@ -189,7 +189,7 @@ local j_snecko = SMODS.Joker{
                         local _rank = pseudorandom_element({'2','3','4','5','6','7','8','9','T','J','Q','K','A'}, pseudoseed('ouija'))
                         local card = G.hand.cards[i]
                         print(tostring(card.base))
-                        local suit_prefix = string.sub(card.base.suit, 1, 1)..'_'
+                        local suit_prefix = SMODS.Suits[card.base.suit].card_key..'_'
                         local rank_suffix =_rank
                         card:set_base(G.P_CARDS[suit_prefix..rank_suffix])
                         print(tostring(card.base))
